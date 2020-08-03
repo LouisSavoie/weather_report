@@ -1,5 +1,7 @@
 const axios = require('axios');
 
+//seperate concerns and deal with promises
+
 // get forecast url
 function getForecastURL() {
     axios.get('https://api.weather.gov/points/42.1958,-84.3809')
@@ -10,9 +12,6 @@ function getForecastURL() {
   .catch(function (error) {
     // handle error
     console.log(error);
-  })
-  .finally(function () {
-    // always executed
   });
 };
 
@@ -26,9 +25,6 @@ function getForecast(url) {
     .catch(function (error) {
       // handle error
       console.log(error);
-    })
-    .finally(function () {
-      // always executed
     });
 };
 
