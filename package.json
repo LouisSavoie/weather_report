@@ -1,0 +1,22 @@
+{
+  "name": "weatherreport",
+  "version": "1.0.0",
+  "description": "A web page that displays the local weather forecast data from the National Weather Service API.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LouisSavoie/weather_report.git"
+  },
+  "author": "Louis Savoie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LouisSavoie/weather_report/issues"
+  },
+  "homepage": "https://github.com/LouisSavoie/weather_report#readme",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
