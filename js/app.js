@@ -1,31 +1,16 @@
 const axios = require('axios');
 
-//seperate concerns and deal with promises
-
-// get forecast url
-function getForecastURL() {
-    axios.get('https://api.weather.gov/points/42.1958,-84.3809')
-  .then(function (response) {
-    // handle success
-    getForecast(response.data.properties.forecast);
-  })
-  .catch(function (error) {
-    // handle error
-    console.log(error);
-  });
+async function getDays() {
+  const urlResponse = await axios.get('https://api.weather.gov/points/42.1958,-84.3809').catch(error => console.log("GET url Error: " + error));
+  const daysResponse = await axios.get(urlResponse.data.properties.forecast).catch(error => console.log("GET days Error: " + error));
+  return daysResponse.data.properties.periods;
 };
 
-// get forecast
-function getForecast(url) {
-    axios.get(url)
-    .then(function (response) {
-        // handle success
-      console.log(response.data.properties.periods);
-    })
-    .catch(function (error) {
-      // handle error
-      console.log(error);
-    });
+async function main() {
+  // get weather data from API
+  const days = await getDays();
+  // add weather data to the DOM
+  console.log(days); // placeholder
 };
 
-getForecastURL();
+main();
