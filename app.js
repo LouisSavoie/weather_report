@@ -8,7 +8,11 @@ async function main() {
   // get weather data from API
   const days = await getDays();
   // add weather data to the DOM
-  console.log(days); // placeholder
+  for (let i = 0; i < 6; i++) {
+    $("#period" + i).text(days[i].name);
+    $("#img" + i).attr({src: days[i].icon});
+    $("#details" + i).text(days[i].detailedForecast);
+  };
 };
 
 main();
