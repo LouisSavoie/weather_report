@@ -13,7 +13,7 @@ A web page that displays the local weather forecast data from the National Weath
 ## How to use (WIP)
 
 1. Clone or Download the repository.
-2. Install [Node.js](https://nodejs.org/en/download/): [Instructions](https://nodejs.org/en/download/package-manager/#windows)
+2. Install [Node.js](https://nodejs.org/en/download/): [Instructions](https://nodejs.org/en/download/package-manager)
 3. cd into the main directory of the repository
 4. Install required dependencies: `npm install axios jquery`
 5. Run node: `node js/app.js`
