@@ -1,9 +1,7 @@
-const axios = require('axios');
-
 async function getDays() {
-  const urlResponse = await axios.get('https://api.weather.gov/points/42.1958,-84.3809').catch(error => console.log("GET url Error: " + error));
-  const daysResponse = await axios.get(urlResponse.data.properties.forecast).catch(error => console.log("GET days Error: " + error));
-  return daysResponse.data.properties.periods;
+  const urlResponse = await $.ajax('https://api.weather.gov/points/42.1958,-84.3809');
+  const daysResponse = await $.ajax(urlResponse.properties.forecast);
+  return daysResponse.properties.periods;
 };
 
 async function main() {
