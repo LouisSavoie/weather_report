@@ -1,6 +1,6 @@
-# Weather Report (WIP)
+# Weather Report
 
-A web page that displays my local weather forecast data from the National Weather Service API.
+A simple web page that displays my local weather forecast data from the National Weather Service API.
 
 ## Included Technologies
 
